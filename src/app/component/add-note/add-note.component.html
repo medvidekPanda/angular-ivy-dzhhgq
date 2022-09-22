@@ -1,0 +1,15 @@
+<h2>New note</h2>
+
+<form [formGroup]="noteForm" class="note__form">
+  <input id="title" placeholder="Title" type="text" formControlName="title" />
+  <input id="body" placeholder="Body" type="text" formControlName="body" />
+  <input id="date" placeholder="Date" type="date" formControlName="date" />
+  <input
+    id="phone"
+    placeholder="+420 ___ ___ ___"
+    type="tel"
+    formControlName="phone"
+  />
+</form>
+
+<button [disabled]="!noteForm.valid" (click)="save()">Add</button>

@@ -1,0 +1,7 @@
+<a [routerLink]="['/notes']">Back to list</a>
+<ng-container *ngIf="note$ | async as note">
+  <h1>{{ note.title }}</h1>
+  <p>{{ note.body }}</p>
+  <p *ngIf="note.date">{{ note.date }}</p>
+  <p *ngIf="note.phone">{{ note.phone }}</p>
+</ng-container>

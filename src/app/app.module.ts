@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { RouterModule } from '@angular/router';
-import { NotesComponent } from './notes/notes.component';
-import { NoteDetailComponent } from './note-detail/note-detail.component';
-import { AddNoteComponent } from './add-note/add-note.component';
+import { NotesComponent } from './component/notes/notes.component';
+import { NoteDetailComponent } from './component/note-detail/note-detail.component';
+import { AddNoteComponent } from './component/add-note/add-note.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -31,7 +31,6 @@ import { AddNoteComponent } from './add-note/add-note.component';
   ],
   declarations: [
     AppComponent,
-    HelloComponent,
     AddNoteComponent,
     NotesComponent,
     NoteDetailComponent,
