@@ -1,0 +1,12 @@
+<h2>New note</h2>
+
+<input
+  placeholder="Title"
+  (change)="changeNewNoteObject('title', $any($event.target).value)"
+/>
+<input
+  placeholder="Body"
+  (change)="changeNewNoteObject('body', $any($event.target).value)"
+/>
+
+<button (click)="save()">Save</button>
